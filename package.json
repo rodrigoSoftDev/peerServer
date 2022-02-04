@@ -1,0 +1,23 @@
+{
+  "name": "demo-webrtc-cubiq",
+  "version": "1.0.0",
+  "description": "Call server",
+  "main": "peerserver.js & mediaserver.js",
+  "scripts": {
+	"install": "openssl req  -nodes -new -x509  -keyout server.key -out server.cert -subj \"/CN=localhost\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon peerserver.js & node mediaserver.js 143.198.166.183"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "medooze-media-server": "^0.106.3",
+    "nodemon": "^2.0.4",
+    "peer": "^0.5.3",
+    "semantic-sdp": "^3",
+    "socket.io": "^2.4.1",
+    "websocket": "^1.0.26"
+  },
+  "devDependencies": {
+    "@types/socket.io": "^3.0.2"
+  }
+}
